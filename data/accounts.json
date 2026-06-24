@@ -1,0 +1,20 @@
+[
+    {
+        "id": "96773fcf-0aa0-42c2-a288-5dc92cfdd7cb",
+        "owner": "Astx",
+        "password": "123",
+        "balance": 0,
+        "account_type": "Saving",
+        "history": [],
+        "bank_name": "Test Bank"
+    },
+    {
+        "id": "076836e1-8288-4180-a390-1782322a4f0f",
+        "owner": "Armen",
+        "password": "555",
+        "balance": 0,
+        "account_type": "Checking",
+        "history": [],
+        "bank_name": "Test Bank"
+    }
+]
