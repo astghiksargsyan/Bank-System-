@@ -50,7 +50,7 @@ class BankAccount:
             print("Deposit must be positive")
             return
         self.balance += amount
-        self.history.append(f"Current operation is {amount}")
+        self.history.append(f"Deposit: ${amount}")
     def withdraw(self, amount):
         if amount <= 0:
             print("Withdraw must be positive")
@@ -59,7 +59,7 @@ class BankAccount:
             print("The balance is not enough")
         else:
             self.balance -= amount
-        self.history.append(f"Current operation is {amount}")
+        self.history.append(f"Withdrawal: ${amount}")
     @classmethod
     def change_interest_rate(cls, value):
         cls.interest_rate = value
@@ -72,6 +72,7 @@ class BankAccount:
         )
         obj.id = data["id"]
         obj.balance = data["balance"]
+        obj.history = data.get("history", [])
         return obj
     def __str__(self):
         return f"{self.owner} has ${self.balance} available balance. The history of transactions {self.history}"

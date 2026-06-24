@@ -3,9 +3,13 @@
         "id": "96773fcf-0aa0-42c2-a288-5dc92cfdd7cb",
         "owner": "Astx",
         "password": "123",
-        "balance": 0,
+        "balance": 51,
         "account_type": "Saving",
-        "history": [],
+        "history": [
+            "Withdrawal: $25",
+            "Deposit: $55",
+            "Withdrawal: $4"
+        ],
         "bank_name": "Test Bank"
     },
     {
