@@ -59,7 +59,26 @@ def change_account_type():
         print("Incorrect Value. Choose anothe value. ")
     update_data(current_account)
 
+def transaction_between_accounts():
+    accounts = load_data()
+    print("First login to make transaction")
+    current_account = login_function()
+    reciver_account = input("Enter the username of the account you want to transfer money: ")
+    amount =  float(input("Enter the amount: "))
+    for account in accounts:
+        if reciver_account == account["owner"]:
+            receiver_account = BankAccount.from_dict(account)
 
+    if current_account.balance < amount:
+        print("The blance is not enought")
+    else:
+        current_account.withdraw(amount)
+        receiver_account.deposit(amount)
+
+        update_data(current_account)
+        update_data(receiver_account)
+
+        print("Transfer completed successfully")
 
 def view_statistic():
     accounts = load_data()

@@ -6,6 +6,7 @@ from utils.bank_account_functions import view_balance
 from utils.bank_account_functions import deposit_function
 from utils.bank_account_functions import withdraw_function
 from utils.bank_account_functions import change_account_type
+from utils.bank_account_functions import transaction_between_accounts
 from utils.rate_related_functions import change_interest_rate_function
 from models.bank_account import BankAccount
 from models.savings_account import SavingsAccount
@@ -20,7 +21,8 @@ init_options = (
     ("6", "View Bank Statistics", view_statistic),
     ("7", "View Balance", view_balance),
     ("8", "Withdraw", withdraw_function),
-    ("9", "Deposit", deposit_function) 
+    ("9", "Deposit", deposit_function),
+    ("10", "Transaction between accounts", transaction_between_accounts),
 )
 
 def main():

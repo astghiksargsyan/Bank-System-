@@ -3,12 +3,14 @@
         "id": "96773fcf-0aa0-42c2-a288-5dc92cfdd7cb",
         "owner": "Astx",
         "password": "123",
-        "balance": 51,
+        "balance": 27.0,
         "account_type": "Saving",
         "history": [
             "Withdrawal: $25",
             "Deposit: $55",
-            "Withdrawal: $4"
+            "Withdrawal: $4",
+            "Withdrawal: $12.0",
+            "Withdrawal: $12.0"
         ],
         "bank_name": "Test Bank"
     },
@@ -16,9 +18,11 @@
         "id": "076836e1-8288-4180-a390-1782322a4f0f",
         "owner": "Armen",
         "password": "555",
-        "balance": 0,
+        "balance": 12.0,
         "account_type": "Checking",
-        "history": [],
+        "history": [
+            "Deposit: $12.0"
+        ],
         "bank_name": "Test Bank"
     }
 ]
