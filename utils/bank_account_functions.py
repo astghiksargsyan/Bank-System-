@@ -2,11 +2,22 @@ from models.bank_account import BankAccount
 from utils.file_operations import load_data
 from utils.file_operations import save_data
 from utils.file_operations import update_data
-
+def check_username(owner):
+    """Check if a username already exists."""
+    accounts = load_data()
+    for account in accounts:
+        if account["owner"] == owner:
+            return True
+    return False
 def add_account():
     """Create a new account and save it to the JSON file."""
+    accounts = load_data()
     account = BankAccount.get_account_info()
-    save_data(account)
+    if check_username(account.owner):
+        print("Username already exists. Choose another!")
+        return
+    save_data(accounts, account)
+
 def login_function():
     login_input = input("Enter owner name: ")
     password_input = input("Enter password: ")
@@ -61,23 +72,20 @@ def change_account_type():
 
 def transaction_between_accounts():
     accounts = load_data()
-    print("First login to make transaction")
+    print("Please log in to make a transaction")
     current_account = login_function()
-    reciver_account = input("Enter the username of the account you want to transfer money: ")
+    receiver_account = input("Enter the username of the account you want to transfer money to: ")
     amount =  float(input("Enter the amount: "))
     for account in accounts:
-        if reciver_account == account["owner"]:
+        if receiver_account == account["owner"]:
             receiver_account = BankAccount.from_dict(account)
-
     if current_account.balance < amount:
-        print("The blance is not enought")
+        print("The balance is not enough")
     else:
         current_account.withdraw(amount)
         receiver_account.deposit(amount)
-
         update_data(current_account)
         update_data(receiver_account)
-
         print("Transfer completed successfully")
 
 def view_statistic():

@@ -9,9 +9,12 @@ from utils.bank_account_functions import change_account_type
 from utils.bank_account_functions import transaction_between_accounts
 from utils.rate_related_functions import change_interest_rate_function
 from models.bank_account import BankAccount
+from models.bank_system import Bank
 from models.savings_account import SavingsAccount
     
- 
+ameria = Bank("AmeriaBank")
+InecoBank = Bank("InecoBank")
+
 init_options = (
     ("1", "Create Account", add_account),
     ("2", "View All Accounts of bank", view_accounts),

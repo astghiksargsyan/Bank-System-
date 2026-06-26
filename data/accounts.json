@@ -1,28 +1,36 @@
 [
     {
-        "id": "96773fcf-0aa0-42c2-a288-5dc92cfdd7cb",
+        "id": "06adfabd-3b3a-4042-a1a3-8d28767d2692",
         "owner": "Astx",
         "password": "123",
-        "balance": 27.0,
+        "balance": 3590.0,
+        "bank_name": "AmeriaBank",
         "account_type": "Saving",
         "history": [
-            "Withdrawal: $25",
-            "Deposit: $55",
-            "Withdrawal: $4",
-            "Withdrawal: $12.0",
-            "Withdrawal: $12.0"
-        ],
-        "bank_name": "Test Bank"
+            "Withdrawal: $44",
+            "Deposit: $4000",
+            "Withdrawal: $10",
+            "Withdrawal: $400.0"
+        ]
     },
     {
-        "id": "076836e1-8288-4180-a390-1782322a4f0f",
+        "id": "a9ce3f91-a2e7-4a19-9f21-a605cf1d89d7",
         "owner": "Armen",
-        "password": "555",
-        "balance": 12.0,
-        "account_type": "Checking",
+        "password": "444",
+        "balance": 400.0,
+        "bank_name": "AmeriaBank",
+        "account_type": "Saving",
         "history": [
-            "Deposit: $12.0"
-        ],
-        "bank_name": "Test Bank"
+            "Deposit: $400.0"
+        ]
+    },
+    {
+        "id": "72c5ae63-53e4-473d-a195-bd13c11e9e29",
+        "owner": "Jhon",
+        "password": "444",
+        "balance": 0,
+        "bank_name": "InecoBank",
+        "account_type": "Saving",
+        "history": []
     }
 ]

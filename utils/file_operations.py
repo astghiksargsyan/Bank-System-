@@ -9,7 +9,7 @@ def load_data():
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         return []
-def save_data(account): 
+def save_data(accounts, account): 
     accounts = load_data() 
     accounts.append(account.create_single_account()) 
     with open(ACCOUNT_FILE, "w", encoding="utf-8") as f: 
